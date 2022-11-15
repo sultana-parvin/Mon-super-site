@@ -14,13 +14,14 @@
     <header id="header_area" class="<?php echo get_theme_mod('dhalem_menu_position'); ?>">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <a href =  "<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('dhalem_logo'); ?>" alt=""></a>
                 </div>
-                <div class= "col-md-8">
-                <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id' => 'nav') ); ?>
-                <input class="col-md-2" type="button" value="Get a Quote">
+                <div class= "col-md-9">
+                    <?php wp_nav_menu( array('theme_location' => 'header-menu', 'menu_id' => 'nav') ); ?>
+                    <a href="" class="btn btn-primary">Get a quote</a>
                 </div>
+                
                 
             </div>
         </div>
