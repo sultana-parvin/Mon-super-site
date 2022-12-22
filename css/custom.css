@@ -1,3 +1,7 @@
+:root{
+  --pink:#ea1a70;
+}
+
 body {
     font-family: "Roboto", serif;
     font-size: 15px;
@@ -27,7 +31,7 @@ body {
   }
 
   a.redmore {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
     font-size: 15px;
     text-decoration: navajowhite;
@@ -83,7 +87,7 @@ body {
     text-decoration: none;
   }
   #header_area .col-md-9 ul li a:hover {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   
@@ -113,7 +117,7 @@ body {
     color: #262626;
   }
   #header_area .col-md-9 ul li:hover a {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   #header_area .col-md-9 ul li:hover ul li a {
@@ -134,7 +138,7 @@ body {
     left: 200px;
   }
   #header_area .col-md-9 ul li ul li:hover a {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   #header_area .col-md-9 ul ul li:hover ul li a {
@@ -142,7 +146,7 @@ body {
     color: #fff;
   }
   #header_area .col-md-9 ul ul li ul li a:hover {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
 
@@ -522,6 +526,10 @@ input.email{
   padding: 10px;
 
 }
+
+
+
+
 
 
 

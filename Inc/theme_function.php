@@ -66,8 +66,44 @@ function dhalem_logo_customize($wp_customize){
 
     ));
 
+    // theme color
+
+    $wp_customize-> add_section('dhalem_colors', array('title' =>__('theme color', 'sultanaparvin'), 
+'description' => 'Si vous souhaitez changer votre theme color, vous pouvez le faire.',
+));
+
+$wp_customize->add_setting('dhalem_bg_color', array(
+    'default' =>'#ffffff' ,
+));
+
+$wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'dhalem_bg_color', array(
+    'label' => 'Background Color',
+    'section' => 'dhalem_colors',
+    'settings' => 'dhalem_bg_color',
+)));
+
+$wp_customize->add_setting('dhalem_primary_color', array(
+    'default' =>'#ea1a70' ,
+));
+
+$wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'dhalem_primary_color', array(
+    'label' => 'Primary Color',
+    'section' => 'dhalem_colors',
+    'settings' => 'dhalem_primary_color',
+)));
+
 
 }
 
 add_action( 'customize_register', 'dhalem_logo_customize' );
 
+function dhalem_theme_color(){
+    ?>
+    <style>
+        body{background: <?php echo get_theme_mod('dhalem_bg_color') ;?>}
+        :root{ --pink: <?php echo get_theme_mod('dhalem_primary_color') ;?>}
+    </style>
+    <?php
+}
+
+add_action('wp_head', 'dhalem_theme_color');
