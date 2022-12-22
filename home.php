@@ -8,6 +8,8 @@ get_header();
 <div class="container_article">
     <ul>
 
+    
+
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
     <li><?php the_post_thumbnail(); ?></li>

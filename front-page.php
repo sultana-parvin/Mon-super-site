@@ -6,6 +6,8 @@
 
 get_header(); ?>
 
+<?php get_search_form() ?>
+
   <section id="slider_area">
     <div class="slider">
       <?php 

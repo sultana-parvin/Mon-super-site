@@ -11,7 +11,7 @@ add_image_size('post-thumbnails', 970, 350, true);
 // Except to 40 Word
 
 function dhalem_excerpt_more($more){
-  return '<br> <br> <a class="redmore" href="'.get_permalink( $post->ID) . '">' . 'Read More' . '</a>';
+  return '<br> <br> <a class="redmore" href="'.get_permalink( get_the_ID() ) . '">' . 'Read More' . '</a>';
 }
 add_filter('excerpt_more', 'dhalem_excerpt_more');
 
@@ -22,7 +22,7 @@ add_filter('excerpt_length', 'dhalem_excerpt_lenght', 999);
 
 
 // Pagenav Function
-function dhalem_pagenav(){
+function dhal_pagenav(){
   global $wp_query, $wp_rewrite;
   $pages ='';
   $max = $wp_query->max_num_pages;
